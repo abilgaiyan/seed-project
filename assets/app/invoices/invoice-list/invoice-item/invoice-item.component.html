@@ -1,0 +1,13 @@
+<a
+  style="cursor: pointer;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  class="list-group-item clearfix">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">Invoice# -{{ invoice.id }}</h4>
+    <p class="list-group-item-text">Customer- {{ invoice.customer.name }}</p>
+    <p class="list-group-item-text">Discount- {{ invoice.discount }}</p>
+    <p class="list-group-item-text">Total- {{ invoice.total }}</p>
+  </div>
+
+</a>

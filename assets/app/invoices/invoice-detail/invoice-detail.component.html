@@ -1,0 +1,43 @@
+<div class="row">
+
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ invoice.id }}  {{ invoice.customer_id }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div
+      class="btn-group"
+      appDropdown>
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle">
+        Manage Invoice <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a style="cursor: pointer;" (click)="onEditInvoice()">Edit invoice</a></li>
+        <li><a style="cursor: pointer;" (click)="onDeleteInvoice()">Delete invoice</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    {{ invoice.customer.name }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let invoiceitem of invoice.invoiceitems ">
+        
+          Product Name-[ {{ invoiceitem.product.name  }} ] Quantity- [ {{ invoiceitem.quantity }} ] Price - [ {{ invoiceitem.product.price }} ] SubTotal-[ {{invoiceitem.subtotal}} ]
+        <pre>{{invoiceitem.product | json }}</pre>
+      </li>
+    </ul>
+  </div>
+</div>

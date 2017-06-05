@@ -1,0 +1,16 @@
+  <h3>Customers List</h3>
+<div class="row">
+
+  <div class="col-xs-12">
+    <ul class="list-group">
+    <a
+      class="list-group-item"
+      style="cursor: pointer"
+      *ngFor="let customer of customers; let i = index"
+      (click)="onEditCustomer(i)"
+    >
+      {{ customer.id }}  {{ customer.name }} ({{ customer.address }})
+    </a>
+  </ul>
+  </div>
+</div>
