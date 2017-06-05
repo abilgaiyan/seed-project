@@ -3,6 +3,7 @@
 - sqlite3
 - node
 - npm
+- angular 4 (using angular cli)
 
 # Getting Started
 
@@ -10,10 +11,13 @@
 `npm install`
 
 ###### Run the node server
-`node app.js`
+`npm run start`
+
+###### Run the ANGULAR client side
+'npm run build'
 
 ###### Viewing the application in your browser
-`http://localhost:8000`
+`http://localhost:3000`
 
 # Schema
 
@@ -70,5 +74,3 @@ GET|PUT|DELETE    /api/invoices/{id}
 GET|POST          /api/invoices/{id}/items
 GET|PUT|DELETE    /api/invoices/{invoice_id}/items/{id}
 ```
-
-
